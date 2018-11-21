@@ -1,10 +1,13 @@
-<h1>New restaurant</h1>
+<div class= "head">
+  <h1>New restaurant</h1>
+  <%= link_to "Back to list", restaurants_path, class: "link-back-to-list" %>
+</div>
 <%= simple_form_for @restaurant do |f| %>
   <%= f.input :name %>
   <%= f.input :address%>
   <%= f.input :phone_number %>
   <%= f.input :category %>
-  <%= f.submit "Add this restaurant", class: "button" %>
+  <%= f.submit "Add this restaurant", class: "button add" %>
 <% end %>
 
-<%= link_to "Back to list", restaurants_path %>
+

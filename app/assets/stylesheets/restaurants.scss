@@ -2,19 +2,39 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+  margin: 10px;
+  padding: 10px;
+}
+
 h1 {
   color: #EF6F6C;
 }
 
+ul {
+  margin-bottom: 20px;
+}
 
-.fa {
-  color: #EDAF97;
+li {
+  padding: 10px;
+}
+
+.link {
+  color: black;
+}
+
+.link:hover {
+  color: #F39694;
+  text-decoration: none;
 }
 
 
-
+// .fa {
+//   color: #EDAF97;
+// }
 
 .button {
+  width: 190px;
   background-color: #EF6F6C;
   color: white;
   border-radius: 5px;
@@ -26,3 +46,81 @@ h1 {
   border: 1px solid #EF6F6C;
   color: #EF6F6C;
 }
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.restau-info {
+  padding: 10px;
+}
+
+.reviews {
+  padding: 10px;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+h4 {
+  color: #F39694;
+  font-style: normal;
+}
+
+.link-back-to-list {
+  color: #F39694;
+  text-decoration: overline;
+  padding: 10px;
+}
+
+.link-back-to-list:hover {
+  color: grey;
+  text-decoration: none;
+}
+
+form {
+  width: 300px;
+  margin-top: 15px;
+  padding: 0px 0px 10px auto;
+  position: absolute;
+}
+
+label {
+  color: grey;
+}
+
+input {
+  border-radius: 3px;
+}
+
+.add {
+  position: relative;
+  left: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

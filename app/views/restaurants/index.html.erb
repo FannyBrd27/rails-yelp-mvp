@@ -2,10 +2,10 @@
 <ul>
   <% @restaurants.each do |restaurant| %>
   <li>
-    <%= link_to restaurant.name, restaurant_path(restaurant) %>
-    <%= link_to restaurant_path(restaurant), method: :delete, :class=>"delete" do %>
+    <%= link_to restaurant.name, restaurant_path(restaurant), class: "link" %>
+   <!--  <%= link_to restaurant_path(restaurant), method: :delete, :class=>"delete" do %>
       <i class="fa fa-trash" aria-hidden="true"></i>
-    <% end %>
+    <% end %> -->
   </li>
   <% end %>
 </ul>

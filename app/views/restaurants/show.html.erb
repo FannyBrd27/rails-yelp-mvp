@@ -1,18 +1,25 @@
-<h1><%= @restaurant.name %></h1>
-<p><%= @restaurant.category %></p>
-<p><%= @restaurant.address %></p>
-<p><%= @restaurant.phone_number %></p>
-
-<% @restaurant.reviews.each do |review| %>
-  <%= review.content %>
-  <%= review.rating %>
-<% end %>
-
-<div class="link">
-  <%= link_to "Back to list", restaurants_path %>
+<div class="head">
+  <h1><%= @restaurant.name %></h1>
+  <%= link_to "Back to list", restaurants_path, class: "link-back-to-list" %>
+</div>
+  <hr>
+<div class="restau-info">
+  <p><strong>Food type :</strong> <%= @restaurant.category %></p>
+  <p><strong>Address : </strong><%= @restaurant.address %></p>
+  <p><strong>Contact :</strong> <%= @restaurant.phone_number %></p>
 </div>
 
-<div class="button">
-  <%= link_to "Add a review to this restaurant", new_restaurant_review_path(@restaurant.id) %>
+<div class="reviews">
+  <h4>Reviews</h4>
+  <% @restaurant.reviews.each do |review| %>
+    <%= review.content %>
+    <br>
+    <p>Rating : <%= review.rating %></p>
+  <% end %>
 </div>
+
+<div>
+  <%= link_to "Add a review to this restaurant", new_restaurant_review_path(@restaurant.id), class: "button" %>
+</div>
+
 
