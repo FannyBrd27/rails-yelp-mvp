@@ -1,3 +1,28 @@
 // Place all the styles related to the Restaurants controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1 {
+  color: #EF6F6C;
+}
+
+
+.fa {
+  color: #EDAF97;
+}
+
+
+
+
+.button {
+  background-color: #EF6F6C;
+  color: white;
+  border-radius: 5px;
+  padding: 8px 13px;
+}
+
+.button:hover {
+  background-color: transparent;
+  border: 1px solid #EF6F6C;
+  color: #EF6F6C;
+}

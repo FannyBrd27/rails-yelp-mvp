@@ -1,6 +1,13 @@
 <h1>All restaurants</h1>
 <ul>
   <% @restaurants.each do |restaurant| %>
-    <h4><li><%= link_to restaurant.name, restaurant_path(restaurant) %></li></h4>
+  <li>
+    <%= link_to restaurant.name, restaurant_path(restaurant) %>
+    <%= link_to restaurant_path(restaurant), method: :delete, :class=>"delete" do %>
+      <i class="fa fa-trash" aria-hidden="true"></i>
+    <% end %>
+  </li>
   <% end %>
 </ul>
+
+<%= link_to "Add a new restaurant", new_restaurant_path, class: "button" %>
