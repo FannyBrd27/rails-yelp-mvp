@@ -14,12 +14,49 @@
   <% @restaurant.reviews.each do |review| %>
     <%= review.content %>
     <br>
-    <p>Rating : <%= review.rating %></p>
+    <p>Rating:
+      <%  if review.rating == 1 %>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+        <%  elsif review.rating == 2 %>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+        <%  elsif review.rating == 3 %>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+          <span class="fa fa-star"></span>
+        <%  elsif review.rating == 4 %>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+        <% else %>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+      <% end %>
+    </p>
   <% end %>
 </div>
 
 <div>
   <%= link_to "Add a review to this restaurant", new_restaurant_review_path(@restaurant.id), class: "button" %>
 </div>
+
+
+
+
+
 
 
